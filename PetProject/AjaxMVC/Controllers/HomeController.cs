@@ -10,21 +10,13 @@ namespace AjaxMVC.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(model:DateTime.Now.ToString("dd/mm/yyyy hh:mm:ss tt"));
         }
-
-        public ActionResult About()
+        public ActionResult Timer()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return Content( DateTime.Now.ToString("dd/mm/yyyy hh:mm:ss tt"));
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
     }
 }
