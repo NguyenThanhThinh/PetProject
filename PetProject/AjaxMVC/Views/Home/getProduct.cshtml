@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AjaxMVC.Models.Product>
+@{
+    ViewBag.Title = "getProduct";
+}
+
+<h2>Product</h2>
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Date.ToString("hh:mm tt MM/dd/yyyy")</td>
+                <td>
+                    <button data-url="@Url.Action("Delete","Home",new {id=item.Id })" class="btn btn-danger btn-sm btn-delete"><i class="glyphicon glyphicon-remove"></i></button>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+@section scripts{
+<script src="~/Scripts/bootbox.js"></script>
+    <script>
+        function onDeleteProduct(e) {
+            e.preventDefault();
+            var $btn = $(this);
+            bootbox.confirm('Are you sure?', function (yes) {
+                if (!yes)
+                    return;
+                $.ajax({
+                    url: $btn.data('url'),
+                    method: 'post',
+                    success: function (resp) {
+                        if (resp != null && resp.code == 1) {
+                            $btn.closest('tr').remove();
+                            alert("Successful");
+                        }
+                        else {
+                            alert("Cannot delete this product")
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("error")
+                    }
+                });
+            });
+        }
+        $(document).on('click', '.btn-delete', onDeleteProduct);
+    </script>
+    }
+
