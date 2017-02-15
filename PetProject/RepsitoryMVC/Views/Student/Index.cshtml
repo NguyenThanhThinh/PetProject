@@ -1,0 +1,42 @@
+﻿@model IEnumerable<RepsitoryMVC.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>The List student</h2>
+<p>
+    <a href="@Url.Action("Create","Student")" class="btn btn-info btn-sm">
+        <span class="glyphicon glyphicon-plus"></span><span class="hidden-xs"></span>
+    </a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Address</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                        <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"></span>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

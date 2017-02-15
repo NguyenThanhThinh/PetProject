@@ -26,6 +26,11 @@ namespace RepsitoryMVC.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Students.AddOrUpdate(
+                new Models.Student { Name="Nguyen Thanh Thinh",Email="Thanhthinhcntt@gmail.com",Address="Can tho"},
+                 new Models.Student { Name = "Nguyen Thanh Be", Email = "Thanhthinhcntt@gmail.com", Address = "Soc Trang" }
+
+                );
         }
     }
 }
