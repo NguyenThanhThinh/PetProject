@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMVC", "AjaxMVC\AjaxMVC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepsitoryMVC", "RepsitoryMVC\RepsitoryMVC.csproj", "{E4C97468-E1C6-4D64-975A-0A6E4A533017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular", "Angular\Angular.csproj", "{7EFBCD08-3769-4824-A044-F2D443BC88E8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{E4C97468-E1C6-4D64-975A-0A6E4A533017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4C97468-E1C6-4D64-975A-0A6E4A533017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4C97468-E1C6-4D64-975A-0A6E4A533017}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EFBCD08-3769-4824-A044-F2D443BC88E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EFBCD08-3769-4824-A044-F2D443BC88E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EFBCD08-3769-4824-A044-F2D443BC88E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EFBCD08-3769-4824-A044-F2D443BC88E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
