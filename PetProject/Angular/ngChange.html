@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ngChange live demo</title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/app/ngChange.js"></script>
+</head>
+<body ng-app="app" ng-controller="NgChangeController">
+    <input type="checkbox" ng-model="checked" ng-change="checkboxChange()" />
+    <div>Checked: {{checked}}</div>
+    <div>Click counter: {{counter}}</div>
+
+   
+  
+</body>
+</html>
