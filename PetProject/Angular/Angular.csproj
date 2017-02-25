@@ -129,12 +129,15 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\plugins\angular.js" />
+    <Content Include="Scripts\plugins\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\plugins\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -146,6 +149,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\spa\app.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
